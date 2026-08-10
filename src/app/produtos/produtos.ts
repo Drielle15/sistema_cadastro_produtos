@@ -22,7 +22,7 @@ export class Produtos {
   produtos: Produto[] = [];
 
 
-  /* Guarda temporariamente o produto escolhido para alteração*/
+/* Guarda temporariamente o produto escolhido para alteração*/
   produtoEditando: Produto | null = null;
 
 
@@ -30,7 +30,7 @@ export class Produtos {
   adicionarProduto() {
 
 
-   /*
+/*
   Verifica se existe um produto selecionado para edição.
   Caso exista, atualiza os dados desse produto.
   Caso não exista, cria um novo produto na lista.
@@ -43,7 +43,7 @@ export class Produtos {
       this.produtoEditando.valor = this.valor;
 
 
-        /*
+  /*
     Após salvar a alteração, limpa a seleção
     para voltar ao modo de cadastro normal.
   */
@@ -89,17 +89,16 @@ export class Produtos {
   editarProduto(produto: Produto) {
 
 
-    /* Define qual item da lista será atualizado*/
+/* Define qual item da lista será atualizado*/
     this.produtoEditando = produto;
 
 
-    /* Preenche os campos com os dados atuais do produto selecionado*/
+/* Preenche os campos com os dados atuais do produto selecionado*/
     this.descricao = produto.descricao;
 
     this.valor = produto.valor;
 
   }
-
 
 
   excluirProduto(id: number) {
